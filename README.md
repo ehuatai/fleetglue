@@ -34,6 +34,11 @@ Nothing exciting will happen if the server receives no POST requests! ```send_po
 ```bash
 python3 send_post_requests.py
 ```
+This script relies on the ```requests``` library:
+```bash
+pip3 install requests
+```
+
 Each request contains a short poem about a robot and a request ID. 
 
 Simply press enter to send a POST request, and watch as the ROS nodes receive and print them. 
