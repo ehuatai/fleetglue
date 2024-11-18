@@ -12,9 +12,11 @@ class ROSNode(Node):
         super().__init__("action_client")
         self.get_logger().info("Starting action_client node")
 
-        self.timer = self.create_timer(1.0, self.fetch_actions)
-
+        # Create custom action client
         self.action_client = ActionClient(self, Print, "print_action")
+
+        # Query server and create ROS action once per second
+        self.timer = self.create_timer(1.0, self.fetch_actions)
 
     def fetch_actions(self):
         """
@@ -42,8 +44,6 @@ class ROSNode(Node):
 
         except:
             self.get_logger().info("No server connection.")
-
-        
 
     def send_goal(self, json_request):
         """

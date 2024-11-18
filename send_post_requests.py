@@ -29,8 +29,8 @@ def loop():
     inp = input()
     print("=============\n")
     while inp != "exit":  # Loop and sends requests, iterating request_num each time
-        print(f"Request number: {request_num}")
-        send_request({"request_num": request_num, "poem": poem})
+        print(f"Request ID: {request_num}")
+        send_request({"request_ID": request_num, "poem": poem})
         request_num += 1
         print("Next request? Press enter to send. ", end="")
         inp = input()

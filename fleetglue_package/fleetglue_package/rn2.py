@@ -27,7 +27,7 @@ class ROSNode(Node):
         to_print = goal_handle.request.to_print  # String to print
 
         feedback = Print.Feedback()
-        feedback.currently_printing = to_print
+        feedback.currently_printing = to_print  # Not used
         feedback.accepted_print = True
         goal_handle.publish_feedback(
             feedback
