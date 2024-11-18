@@ -1,0 +1,6 @@
+string to_print
+---
+bool complete
+---
+bool accepted_print
+string currently_printing
